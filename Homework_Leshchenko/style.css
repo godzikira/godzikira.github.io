@@ -27,19 +27,19 @@ body {
 	border-style: outset;
 	}
 .WhatsApp {
-    background: url(img/whatsapp.png) no-repeat 0 2px; 
+    background: url(Img/whatsapp.png) no-repeat 0 2px; 
     background-position: right;
 }
 .viber  {
-    background: url(img/viber.png) no-repeat 0 2px; 
+    background: url(Img/viber.png) no-repeat 0 2px; 
     background-position: right;
 }
 .Telegram  {
-    background: url(img/telegram.png) no-repeat 0 2px;
+    background: url(Img/telegram.png) no-repeat 0 2px;
     background-position: right;
 }
 .Skype  {
-    background: url(img/skype.png) no-repeat 0 2px;
+    background: url(Img/skype.png) no-repeat 0 2px;
     background-position: right;
 }
 .tir {
