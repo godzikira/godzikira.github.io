@@ -1,0 +1,216 @@
+body {
+	display: flex;
+	flex-wrap: wrap;
+    flex-direction: column;
+	font-family: 'Mina', sans-serif;
+	margin: 0px;
+	}
+.header {
+	background-image: url(Img/Wintertrees.jpg);
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: flex-start;
+	}
+.header div {
+	width: 30%;
+}
+.header div ul{
+	list-style: none;
+}
+.header  li>a {
+	text-decoration: none;
+	font-weight: 300;
+	color: #e3e3e3;
+	text-shadow: 2px 2px 2px black;
+	
+}
+.header div ul li:hover{
+	border: 2px solid #e3e3e3;
+	border-style: outset;
+	}
+.WhatsApp {
+    background: url(img/whatsapp.png) no-repeat 0 2px; 
+    background-position: right;
+}
+.viber  {
+    background: url(img/viber.png) no-repeat 0 2px; 
+    background-position: right;
+}
+.Telegram  {
+    background: url(img/telegram.png) no-repeat 0 2px;
+    background-position: right;
+}
+.Skype  {
+    background: url(img/skype.png) no-repeat 0 2px;
+    background-position: right;
+}
+.tir img {
+	width: 80%;
+	opacity: 0.8;
+	padding: 0px;
+	height: 400px;
+}
+.tir img:hover {
+	width: 81%;
+}
+.card {
+	font-size: 150%;
+	}
+.name{
+	margin: 10px;
+	color:#fcd959;
+	text-shadow: 1px 1px 2px black, 0 0 1em #262626; 
+	text-align: right;
+}
+.nav-area {
+	flex:1 0 auto;
+	position: relative;
+	padding: 10px;
+}
+.nav-area ul{
+	list-style: none;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px;
+}
+.nav-area ul li {
+	width: 19.9%;
+}
+.nav-area ul li ul {
+	display: none;
+}
+.nav-area ul li>ul li{
+	width: 100%;
+}
+.nav-area ul li:hover>ul{
+	display: flex;
+	position: absolute;
+	z-index: 5;
+	width: 19.9%;
+	padding: 0;
+}
+.nav-area a{
+	text-transform: uppercase;
+	display: block;
+	background: #262626;
+	padding: 15px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	opacity: 0.8;
+	
+}
+.nav-area a:hover{
+	background: #fcd959;
+	color: black;
+	text-shadow: 1px 1px 2px white, 0 0 1em black;
+
+}
+.nav-area .dropdown li>a{
+	background: #000;
+	color: #fff;
+}
+.nav-area .dropdown li>a:hover{
+	background: #fcd959;
+	color: #737373;
+
+}
+.nav-area .dropdown >a:after{
+	padding-left: 0px;
+}
+.main-block {
+	margin: 30px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	}
+.main-block div{
+	border: 2px solid #e3e3e3;
+	border-style: outset;
+	padding: 20px;
+	
+}	
+.main-block div:hover {
+  border-radius: 30%;
+}
+.main-block {
+	font-weight: 700;
+	color:#fcd959;
+	text-align: center;
+}
+.main-block img{
+	
+}
+.resume  {
+	/*background-image: url(Img/avto.jpg);
+	background-size: cover;
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	border-color: #262626;
+	width: 100%;
+	height: 100vh;
+	*/
+}
+.resume h2, .contacts h2{
+	text-align: center;
+	height: 50px;
+	background: #262626;
+	color: #e3e3e3;
+	margin: 0px;
+	padding: 10px;
+}
+.resume .about {
+	padding: 5px ;
+}
+p:first-letter {
+	margin-left: 40px;
+	font-family: 'Lobster', cursive;
+	font-size: 400%;
+}
+.contacts{
+	background-image: url(Img/contacts.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	border-color: #262626;
+	width: 100%;
+	height: 100vh;
+
+	
+}
+@media (max-width: 600px) {
+	.tir {display: none;}
+	.nav-area ul li, .header div, .main-block div, .nav-area ul li:hover>ul{
+	width: 100%;
+	}
+	.header {
+		height: 100%;
+	}
+	.nav-area ul li:hover>ul{
+		position: static;
+		width: 100%;
+	}
+}
+@media screen and (orientation:landscape) and (max-device-width: 900px) {
+    html{
+        -webkit-transform: rotate(-90deg);
+           -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+             -o-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        -webkit-transform-origin: left top;
+           -moz-transform-origin: left top;
+            -ms-transform-origin: left top;
+             -o-transform-origin: left top;
+                transform-origin: left top;
+        width: 320px; /*Разрешение экрана iPhone*/
+        position: absolute;
+        top: 100%;
+            left: 0
+    }
+}
