@@ -1,34 +1,160 @@
-body {
+ body {
 	display: flex;
 	flex-wrap: wrap;
     flex-direction: column;
-	font-family: 'Mina', sans-serif;
 	margin: 0px;
 	}
+.navbar {
+	opacity: 0.8;
+}
 .header {
 	background-image: url(Img/Wintertrees.jpg);
 	background-position: 100% 100%;
 	background-repeat: no-repeat;
 	height: 100vh;
+	background-attachment: fixed;
+ }
+ .calculator {
+	width: 100%;
+	border: 2px solid #e3e3e3;
+    border-style: outset;
+	padding: 1em;
+}
+#stoimost {
+	height: 2em;
+	font-size: 2em;
+	font-weight: bold;
+	color: red;
+}
+.for {
+	float: left;
+}
+.name p {
+	font-size: 1.5em;
+}
+.pulse {
+ width: 90px;
+ height: 90px;
+ color: #fff;
+ text-align: center;
+ background: #5CC2EA;
+ border-radius: 50%;
+ position: relative;
+}    
+.dws {
+ float: right;
+ padding: 1em;
+}    
+.text {
+ opacity: 0;
+ position: absolute;
+ text-transform: uppercase;
+ font-weight: 700;
+ top: 28px;
+ font-size: 15px;
+ transform: scaleX(-1);
+ transition: .5s ease-in-out;
+ opacity: 0;
+
+}  
+.phone {
+ position: absolute;
+ font-size: 50px;
+ text-align: center;
+ width: 90px;
+ height: 90px;
+ line-height: 94px;
+ animation: phone .9s ease-in-out infinite;
+ /*opacity: 0;*/
+}      
+.pulse:hover .text {
+ transform: scaleX(1);
+ transition: .5s ease-in-out;
+ opacity: 1;
+}    
+.pulse::before,
+.pulse::after  {
+ content: '';
+ position: absolute;
+ border: 1px solid #29AEE3;
+ left: -20px;
+ right: -20px;
+ top: -20px;
+ bottom: -20px;
+ border-radius: 50%;
+ animation: pulse 1.8s linear infinite;
+}    
+.pulse::after {
+ animation-delay: .5s;
+}    
+.pulse:hover i{
+ transition: .5s ease-in-out;
+ transform: scale(0);
+ opacity: 0;
+}    
+.phone i {
+ transition: .5s ease-in-out;
+}    
+@keyframes pulse {
+ 0% {
+  transform: scale(0.5);
+  opacity: 0;
+ }
+ 50% {
+  opacity: 1;
+ }
+ 100% {
+  transform: scale(1.2);
+  opacity: 0;
+ }
+}     
+@keyframes phone {
+ 0%, 100% {
+  transform: rotate(-20deg);
+ }
+ 50% {
+  transform: rotate(21deg);
+ }
+}    
+.about h3{
+background: rgb(255, 255, 255) transparent;
+background: rgba(255, 255, 255, 0.3);
+padding: 2em;
+text-shadow: 1px 1px 2px black;
+}
+.about {
+	background-image: url(Img/142007408.jpg);
+	color: white;
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	height: 100vh;
+	background-attachment: fixed;
+	text-align: center;
+ }
+.header .hat{
+	background: rgb(255, 255, 255) transparent;
+	background: rgba(255, 255, 255, 0.3);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-content: flex-start;
-	}
-.header div {
+	padding-top: 50px;
+ 	border: 2px solid white;
+    border-style: outset;}
+.header .hat section {
 	width: 30%;
 }
-.header div ul{
+.header .hat section ul{
 	list-style: none;
 }
-.header  li>a {
+.header  .hat li>a {
+	padding: 1em;
+	font-size: 80%;
 	text-decoration: none;
-	font-weight: 300;
 	color: #e3e3e3;
 	text-shadow: 2px 2px 2px black;
-	
 }
-.header div ul li:hover{
+.header .hat section ul li:hover{
 	border: 2px solid #e3e3e3;
 	border-style: outset;
 	}
@@ -50,90 +176,50 @@ body {
 }
 .tir img {
 	width: 80%;
-	opacity: 0.8;
-	padding: 0px;
-	height: 400px;
+	opacity: 0.7;
+	padding: 2.5em;
 }
 .tir img:hover {
 	width: 81%;
 }
-.card {
+.cart {
+	padding-top: 30px;
 	font-size: 150%;
 	}
 .name{
+	padding-top: 20px;
 	margin: 10px;
 	color:#fcd959;
 	text-shadow: 1px 1px 2px black, 0 0 1em #262626; 
 	text-align: right;
 }
-.nav-area {
-	flex:1 0 auto;
-	position: relative;
-	padding: 10px;
+.carousel-item {
+  height: 65vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-.nav-area ul{
-	list-style: none;
-	margin: 0;
+.price h1{
+	padding-left: 2em;
+}
+.welcome-grids .container{
 	display: flex;
 	flex-wrap: wrap;
-	padding: 0px;
-}
-.nav-area ul li {
-	width: 19.9%;
-}
-.nav-area ul li ul {
-	display: none;
-}
-.nav-area ul li>ul li{
-	width: 100%;
-}
-.nav-area ul li:hover>ul{
-	display: flex;
-	position: absolute;
-	z-index: 5;
-	width: 19.9%;
-	padding: 0;
-}
-.nav-area a{
-	text-transform: uppercase;
-	display: block;
-	background: #262626;
-	padding: 15px;
-	color: #fff;
-	text-decoration: none;
-	text-align: center;
-	opacity: 0.8;
-	
-}
-.nav-area a:hover{
-	background: #fcd959;
-	color: black;
-	text-shadow: 1px 1px 2px white, 0 0 1em black;
-
-}
-.nav-area .dropdown li>a{
-	background: #000;
-	color: #fff;
-}
-.nav-area .dropdown li>a:hover{
-	background: #fcd959;
-	color: #737373;
-
-}
-.nav-area .dropdown >a:after{
-	padding-left: 0px;
+	padding: 0.5em;
 }
 .main-block {
 	margin: 30px;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	}
+}
 .main-block div{
 	border: 2px solid #e3e3e3;
 	border-style: outset;
 	padding: 20px;
-	
 }	
 .main-block div:hover {
   border-radius: 30%;
@@ -143,34 +229,29 @@ body {
 	color:#fcd959;
 	text-align: center;
 }
-.main-block img{
-	
-}
-.resume  {
-	/*background-image: url(Img/avto.jpg);
-	background-size: cover;
-	background-position: 100% 100%;
-	background-repeat: no-repeat;
-	border-color: #262626;
-	width: 100%;
-	height: 100vh;
-	*/
-}
-.resume h2, .contacts h2{
+.resume h2, #call, #news{
 	text-align: center;
-	height: 50px;
+	height: 2em;
 	background: #262626;
 	color: #e3e3e3;
 	margin: 0px;
-	padding: 10px;
+	padding: 0.5em;
 }
-.resume .about {
+.about {
 	padding: 5px ;
 }
 p:first-letter {
 	margin-left: 40px;
-	font-family: 'Lobster', cursive;
-	font-size: 400%;
+}
+.map {
+	float: right;
+	opacity: 0.8;
+	
+}
+footer {
+	position: relative;
+	width: 100vw;
+	bottom: 0;
 }
 .contacts{
 	background-image: url(Img/contacts.jpg);
@@ -179,38 +260,19 @@ p:first-letter {
 	background-repeat: no-repeat;
 	border-color: #262626;
 	width: 100%;
-	height: 100vh;
-
 	
 }
+
 @media (max-width: 600px) {
-	.tir {display: none;}
-	.nav-area ul li, .header div, .main-block div, .nav-area ul li:hover>ul{
+	.tir, .calculator, .name h2 {display: none;}
+	.name p {float: right;} 
+	.header .hat section, .map{
 	width: 100%;
+	padding: 0.5em;
 	}
-	.header {
+	.header .hat{
 		height: 100%;
 	}
-	.nav-area ul li:hover>ul{
-		position: static;
-		width: 100%;
-	}
+	
 }
-@media screen and (orientation:landscape) and (max-device-width: 900px) {
-    html{
-        -webkit-transform: rotate(-90deg);
-           -moz-transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg);
-             -o-transform: rotate(-90deg);
-                transform: rotate(-90deg);
-        -webkit-transform-origin: left top;
-           -moz-transform-origin: left top;
-            -ms-transform-origin: left top;
-             -o-transform-origin: left top;
-                transform-origin: left top;
-        width: 320px; /*Разрешение экрана iPhone*/
-        position: absolute;
-        top: 100%;
-            left: 0
-    }
-}
+
